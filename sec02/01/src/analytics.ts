@@ -1,3 +1,3 @@
-// console.log('Sending data...');
+console.log('Sending data...');
 
-// console.log('someting...');
+console.log('someting...');
