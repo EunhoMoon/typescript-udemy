@@ -75,3 +75,32 @@ function useVehicle(vehicle: Vehicle) {
 
 useVehicle(v1);
 useVehicle(v2);
+
+console.log('=========================');
+
+interface Bird {
+  type: 'bird';
+  flyingSpeed: number;
+}
+
+interface Horse {
+  type: 'horse';
+  runningSpped: number;
+}
+
+type Animal = Bird | Horse;
+
+function moveAnimal(animal: Animal) {
+  let speed;
+  switch (animal.type) {
+    case 'bird':
+      speed = animal.flyingSpeed;
+      break;
+    case 'horse':
+      speed = animal.runningSpped;
+      break;
+  }
+  console.log('Moving at speed: ' + speed);
+}
+
+moveAnimal({ type: 'bird', flyingSpeed: 1_000 });
